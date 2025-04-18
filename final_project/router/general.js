@@ -37,17 +37,17 @@ function getBooksPromise(booksRouter) {
     });
 }
 
-//Task 1
-// Get the book list available in the shop
-// public_users.get('/', function (req, res) {
-//     return res.status(200).send(JSON.stringify(books, null, 4));
-// });
-
 // Task 10: Get the list of books available in the shop by async/await
 public_users.get('/', async function (req, res) {
     let bookList = await getBooksPromise(books);
     res.send(bookList);
 });
+
+//Task 1
+// Get the book list available in the shop
+// public_users.get('/', function (req, res) {
+//     return res.status(200).send(JSON.stringify(books, null, 4));
+// });
 
 //Task 2
 // // Get book details based on ISBN
